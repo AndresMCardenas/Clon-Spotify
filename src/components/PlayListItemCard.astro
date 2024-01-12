@@ -21,17 +21,17 @@ const artistsString = artists.join(", ")
     <img 
       src={cover}
       alt={`Cover of ${title} by ${artistsString}`}
-      class="w-full h-full object-cover rounded-md"
+      class="object-cover w-full h-full rounded-md"
       transition:name=`/playlist/${id} image`
     >
   </picture>
 
   <div class="flex flex-auto flex-col px-2">
-    <h4 class="text-sm text-white">
+    <h4 class="text-sm text-white" transition:name=`playlist ${id} title`>
       {title}
     </h4>
     
-    <span class="text-xs text-gray-400">
+    <span class="text-xs text-gray-400" transition:name=`playlist ${id} artists`>
       {artistsString}
     </span>
   </div>
